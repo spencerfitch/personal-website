@@ -1,0 +1,14 @@
+.show {
+  visibility: visible;
+  transition: all 200ms ease-in;
+}
+.hide {
+  visibility: hidden;
+  transition: all 200ms ease-out;
+  transform: translate(0, -100%);
+}
+/*
+.show.shadow {
+  box-shadow: 20px 20px ;
+}
+*/
