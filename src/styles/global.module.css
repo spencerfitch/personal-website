@@ -42,3 +42,10 @@ body::-webkit-scrollbar-thumb {
 body::-webkit-scrollbar-corner {
   background-color: var(--color-bg-right);
 }
+
+/* Translucent Background */
+.bg-translucent {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
