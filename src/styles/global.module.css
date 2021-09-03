@@ -1,0 +1,34 @@
+/* Color Theming */
+:root {
+  --color-bg-left: #effafb;
+  --color-bg-right: #f5fff7; 
+}
+/*
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg-left: #103D42;
+    --color-bg-right: #003d0d; 
+  }
+}
+*/
+
+
+/* Custom Scrollbar */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #555 transparent;
+}
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-bg-right);
+}
+::-webkit-scrollbar-thumb {
+  background-color: #bbb;
+  border: 3px solid var(--color-bg-right);
+  border-radius: 8px;
+}
+::-webkit-scrollbar-corner {
+  background-color: var(--color-bg-right);
+}
