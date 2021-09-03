@@ -18,6 +18,10 @@
   box-sizing: border-box;
   color: var(--color-text);
 }
+body {
+  background: linear-gradient(to right, var(--color-bg-left), var(--color-bg-right));
+  background-color: var(--color-bg-right);
+}
 
 /* Custom Scrollbar */
 html {
