@@ -6,16 +6,15 @@ import Card from '../components/card';
 const IndexPage = () => {
   return (
     <Layout>
-      <div>
-        <h1 className="w-100 text-center">
-          Hello World!
-        </h1>
-        {[...Array(20).keys()].map(i => (
-          <Card key={i}>
-            Card
-          </Card>
-        ))}
-      </div>
+      <h1 className="w-100 text-center bg-success">
+        Hello World!
+      </h1>
+      
+      {[...Array(20).keys()].map(i => (
+        <Card key={i}>
+          Card
+        </Card>
+      ))}
     </Layout>
   )
 }
