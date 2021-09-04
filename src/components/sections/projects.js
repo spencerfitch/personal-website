@@ -12,7 +12,10 @@ import { tag } from '../../styles/project.module.css';
 const Projects = () => {
   const projectQuery = graphql`
     query {
-      allMdx(filter: {fileAbsolutePath: {regex: "/projects/"}}) {
+      allMdx(
+        sort: {fields: frontmatter___order}
+        filter: {fileAbsolutePath: {regex: "/projects/"}}
+      ) {
         nodes {
           frontmatter {
             demo
