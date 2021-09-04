@@ -11,5 +11,13 @@ module.exports = {
         icon: "src/images/icon.png",
       },
     },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "projects",
+        path: `${__dirname}/content/projects`
+      }
+    },
+    "gatsby-plugin-mdx",
   ],
 };
