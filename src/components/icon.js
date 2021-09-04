@@ -11,6 +11,8 @@ const selectIcon = (name, style, className) => {
       return <FaGithub style={style} className={className} />
     case 'linkExternal':
       return <BiLinkExternal style={style} className={className}/>
+    default: 
+      return <span/>
   }
 }
 
@@ -19,7 +21,7 @@ const Icon = ({ name, size, href }) => {
 
   if (href) {
     return (
-      <a href={href} rel="noreferer" target="_blank" >
+      <a href={href} rel="noreferrer" target="_blank" >
         {selectIcon(name, style, iconLink)}
       </a>
     )
