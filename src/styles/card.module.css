@@ -1,5 +1,6 @@
 :root {
   --card-margin: 0.5rem;
+  --card-padding: 0.5rem;
   --card-shift: -0.15rem;
 }
 
@@ -7,6 +8,7 @@
   position: relative;
   top: 0;
   margin: var(--card-margin);
+  padding: var(--card-padding);
   background-color: rgba(255, 255, 255, 0.4);
   transition: all 0.1s ease-in-out;
 }
