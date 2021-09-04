@@ -6,6 +6,7 @@ import { MDXRenderer } from 'gatsby-plugin-mdx';
 import Card from '../card';
 import Icon from '../icon';
 import { link } from '../../styles/global.module.css';
+import { tag } from '../../styles/project.module.css';
 
 
 const Projects = () => {
@@ -63,9 +64,11 @@ const Projects = () => {
                 </MDXRenderer>
               </MDXProvider>
 
-              <p style={{padding: 0}}>
-                {node.frontmatter.tags.join(' ')}
-              </p>
+              {node.frontmatter.tags.map((elem, idx) => (
+                <span className={tag}>
+                  {elem}
+                </span>
+              ))}
             </Card>
       )))}
     />

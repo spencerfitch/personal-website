@@ -1,0 +1,7 @@
+.tag {
+  display: inline-block;
+  margin: 0 0.2rem;
+  padding: 0.1rem 0.7rem;
+  background-color: rgba(24, 91, 99, 0.2);
+  border-radius: 1rem;
+}
