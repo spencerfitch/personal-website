@@ -49,9 +49,14 @@ body::-webkit-scrollbar-corner {
 
 /* Translucent Background */
 .bg-translucent {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
+}
+@supports not (backdrop-filter: blur(5px)) {
+  .bg-translucent {
+    background: rgba(255, 255, 255, 0.8);
+  }
 }
 
 /* Links */
