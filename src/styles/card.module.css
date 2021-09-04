@@ -1,16 +1,16 @@
+:root {
+  --card-margin: 0.5rem;
+  --card-shift: -0.15rem;
+}
+
 .card {
+  position: relative;
+  top: 0;
+  margin: var(--card-margin);
   background-color: rgba(255, 255, 255, 0.4);
   transition: all 0.1s ease-in-out;
 }
 .card:hover {
+  top: var(--card-shift);
   background-color: rgba(255, 255, 255, 0.9);
-}
-
-.card-container {
-  padding: 1rem;
-  transition: all 0.1s ease-in-out;
-}
-.card-container:hover {
-  padding-top: 0.7rem;
-  padding-bottom: 1.3rem;
 }
