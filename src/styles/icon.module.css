@@ -1,5 +1,5 @@
 .icon path {
-  color: inherit;
+  color: var(--color-text);
 }
 
 .icon-link {
@@ -7,9 +7,9 @@
   width: 2rem;
 }
 .icon-link path {
-  color: inherit;
-  transition: color 0.3s;
+  color: var(--color-link);
+  transition: color var(--time-color-transition);
 }
 .icon-link:hover path{
-  color: var(--color-bg-right);
+  color: var(--color-link-hover);
 }
