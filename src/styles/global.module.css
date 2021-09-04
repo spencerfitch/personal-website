@@ -2,7 +2,10 @@
 :root {
   --color-bg-left: #effafb;
   --color-bg-right: #f5fff7; 
-  --color-text: #333
+  --color-text: #333;
+  --color-link: #185B63;
+  --color-link-hover: #30B6C5;
+  --time-color-transition: 0.3s;
 }
 /*
 @media (prefers-color-scheme: dark) {
@@ -14,6 +17,7 @@
 }
 */
 
+/* Global Styling */
 * {
   box-sizing: border-box;
   color: var(--color-text);
@@ -48,4 +52,14 @@ body::-webkit-scrollbar-corner {
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
+}
+
+/* Links */
+.link {
+  color: var(--color-link);
+  text-decoration: none;
+  transition: all var(--time-color-transition);
+}
+.link:hover{
+  color: var(--color-link-hover);
 }
