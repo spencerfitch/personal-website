@@ -1,0 +1,15 @@
+.icon path {
+  color: inherit;
+}
+
+.icon-link {
+  height: 2rem;
+  width: 2rem;
+}
+.icon-link path {
+  color: inherit;
+  transition: color 0.3s;
+}
+.icon-link:hover path{
+  color: var(--color-bg-right);
+}
