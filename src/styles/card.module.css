@@ -1,7 +1,7 @@
 :root {
-  --card-margin: 0.5rem;
-  --card-padding: 0.5rem;
-  --card-shift: -0.15rem;
+  --card-margin: 0.5em;
+  --card-padding: 0.5em;
+  --card-shift: -0.15em;
 }
 
 .card {

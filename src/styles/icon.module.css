@@ -3,8 +3,8 @@
 }
 
 .icon-link {
-  height: 2rem;
-  width: 2rem;
+  height: 2em;
+  width: 2em;
 }
 .icon-link path {
   color: var(--color-link);
