@@ -51,16 +51,16 @@ const Projects = () => {
                   </a>
                 </h3>
                 
-                {(!node.frontmatter.github) ? null :
+                {node.frontmatter.github && (
                   <Icon
                     name="github" 
                     href={node.frontmatter.github}/>
-                }
-                {(!node.frontmatter.demo) ? null :
+                )}
+                {node.frontmatter.demo && (
                   <Icon
                     name="linkExternal"
                     href={node.frontmatter.demo}/>
-                }
+                )}
 
                 <MDXProvider components={{p: mdxPtag}}>
                   <MDXRenderer>
