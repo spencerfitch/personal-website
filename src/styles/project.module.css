@@ -1,7 +1,37 @@
+.project-container {
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-auto-flow: row;
+  gap: 0 0;
+  place-items: stretch;
+  place-content: center;
+}
+@media (max-width: 60em) {
+  .project-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+}
+@media (max-width: 40em) {
+  .project-container {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+  }
+}
+
+.project {
+  min-width: 15em;
+  max-width: 22em;
+}
+
 .tag {
   display: inline-block;
-  margin: 0 0.2rem;
-  padding: 0.1rem 0.7rem;
+  margin: 0.2em;
+  padding: 0.1em 0.7em;
   background-color: rgba(24, 91, 99, 0.2);
-  border-radius: 1rem;
+  border-radius: 1em;
 }
