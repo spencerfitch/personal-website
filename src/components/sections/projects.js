@@ -6,7 +6,7 @@ import { MDXRenderer } from 'gatsby-plugin-mdx';
 import Card from '../card';
 import Icon from '../icon';
 import { link } from '../../styles/global.module.css';
-import { projectContainer, project, tag } from '../../styles/project.module.css';
+import { projectContainer, project, projectTitle, tag } from '../../styles/project.module.css';
 
 
 const Projects = () => {
@@ -45,7 +45,7 @@ const Projects = () => {
                     href={(node.frontmatter.demo) ? node.frontmatter.demo : node.frontmatter.github}
                     rel="noreferrer"
                     target="_blank"
-                    className={link}
+                    className={`${link} ${projectTitle}`}
                   >
                     {node.frontmatter.title}
                   </a>
@@ -54,7 +54,8 @@ const Projects = () => {
                 {node.frontmatter.github && (
                   <Icon
                     name="github" 
-                    href={node.frontmatter.github}/>
+                    href={node.frontmatter.github}
+                    style={{backgroundColor: 'blue'}}/>
                 )}
                 {node.frontmatter.demo && (
                   <Icon
@@ -69,7 +70,7 @@ const Projects = () => {
                 </MDXProvider>
 
                 {node.frontmatter.tags.map((elem, idx) => (
-                  <span className={tag}>
+                  <span key={idx} className={tag}>
                     {elem}
                   </span>
                 ))}

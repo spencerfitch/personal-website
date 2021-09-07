@@ -21,7 +21,7 @@ const Icon = ({ name, size, href }) => {
 
   if (href) {
     return (
-      <a href={href} rel="noreferrer" target="_blank" >
+      <a href={href} rel="noreferrer" target="_blank" style={{zIndex: 1, position: 'relative'}}>
         {selectIcon(name, style, iconLink)}
       </a>
     )

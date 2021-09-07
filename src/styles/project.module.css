@@ -28,6 +28,16 @@
   max-width: 22em;
 }
 
+.project-title:before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  content: '';
+  z-index: 0;
+}
+
 .tag {
   display: inline-block;
   margin: 0.2em;
