@@ -1,5 +1,6 @@
 /* Color Theming */
 :root {
+  --color-primary: #2CA58D;
   --color-bg-left: #effafb;
   --color-bg-right: #f5fff7; 
   --color-text: #333;

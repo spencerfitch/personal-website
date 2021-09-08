@@ -1,0 +1,28 @@
+.container {
+  margin-top: 15vh;
+  margin-left: 10vw;
+  margin-bottom: 50vh;
+}
+
+.introduction {
+  margin-bottom: -0.4em;
+}
+
+.title {
+  color: var(--color-primary);
+}
+
+.subtitle {
+  color: var(--color-link)
+}
+
+.content {
+  width: min(80%, 40em);
+  margin-top: 2em;
+  font-weight: 600;
+}
+
+.content span {
+  color: var(--color-primary);
+  font-weight: 700;
+}
