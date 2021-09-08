@@ -1,5 +1,5 @@
 import * as React from 'react';
-import "bootstrap/js/src/collapse.js";
+//import "bootstrap/js/src/collapse.js";
 import { bgTranslucent } from '../styles/global.module.css';
 import { show, hide, shadow, resume } from '../styles/nav.module.css';
 import { StaticImage } from 'gatsby-plugin-image';
