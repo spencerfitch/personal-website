@@ -18,14 +18,14 @@ const Hero = () => {
     }
   `;
 
-  const mdxPtag = props => (<p className={`${content} text-muted`} {...props}/>);
+  const mdxPtag = props => (<p className={content} {...props}/>);
 
   return (
       <StaticQuery 
         query={heroQuery}
         render={data => (
           <div className={container}>
-            <h4 className={`${introduction} text-muted`}>
+            <h4 className={introduction}>
               {data.mdx.frontmatter.introduction}
             </h4>
             <h1 className={`${title} display-1 fw-bold`}>
