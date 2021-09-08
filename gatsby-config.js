@@ -5,6 +5,9 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-sitemap`,
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-plugin-mdx`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -12,6 +15,7 @@ module.exports = {
         short_name: `Spencer Fitch`,
         start_url: `/`,
         display: `standalone`,
+        icon: 'src/images/icon.png',
         icons: [
           {
             src: `/favicons/favicon.ico`,
@@ -51,6 +55,5 @@ module.exports = {
         path: `${__dirname}/content/projects`
       }
     },
-    `gatsby-plugin-mdx`,
   ],
 };
