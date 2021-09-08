@@ -40,15 +40,15 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `projects`,
-        path: `${__dirname}/content/projects`
+        name: `content`,
+        path: `${__dirname}/content`
       }
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `hero`,
-        path: `${__dirname}/content/hero`
+        name: `projects`,
+        path: `${__dirname}/content/projects`
       }
     },
     `gatsby-plugin-mdx`,
