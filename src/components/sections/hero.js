@@ -7,15 +7,13 @@ import { container, introduction, title, subtitle, content} from '../../styles/h
 const Hero = () => {
   const heroQuery = graphql`
     query {
-      allMdx(filter: {fileAbsolutePath: {regex: "/hero/"}}) {
-        nodes {
-          frontmatter {
-            introduction
-            title
-            subtitle
-          }
-          body
+      mdx(fileAbsolutePath: {regex: "/hero.mdx/"}) {
+        frontmatter {
+          introduction
+          title
+          subtitle
         }
+        body
       }
     }
   `;
@@ -25,28 +23,24 @@ const Hero = () => {
   return (
       <StaticQuery 
         query={heroQuery}
-        render={data => {
-          console.log(data);
-          const node = data.allMdx.nodes[0];
-          return (
-            <div className={container}>
-              <h4 className={`${introduction} text-muted`}>
-                {node.frontmatter.introduction}
-              </h4>
-              <h1 className={`${title} display-1 fw-bold`}>
-                {node.frontmatter.title}
-              </h1>
-              <h2 className={`${subtitle}`}>
-                {node.frontmatter.subtitle}
-              </h2>
-              <MDXProvider components={{p: mdxPtag}}>
-                <MDXRenderer>
-                  {node.body}
-                </MDXRenderer>
-              </MDXProvider>
-            </div>
-          );
-        }}
+        render={data => (
+          <div className={container}>
+            <h4 className={`${introduction} text-muted`}>
+              {data.mdx.frontmatter.introduction}
+            </h4>
+            <h1 className={`${title} display-1 fw-bold`}>
+              {data.mdx.frontmatter.title}
+            </h1>
+            <h2 className={`${subtitle}`}>
+              {data.mdx.frontmatter.subtitle}
+            </h2>
+            <MDXProvider components={{p: mdxPtag}}>
+              <MDXRenderer>
+                {data.mdx.body}
+              </MDXRenderer>
+            </MDXProvider>
+          </div>
+        )}
       />
   )
 }
