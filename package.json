@@ -28,6 +28,7 @@
     "gatsby-plugin-sitemap": "^4.9.0",
     "gatsby-source-filesystem": "^3.13.0",
     "gatsby-transformer-remark": "^4.10.0",
+    "gatsby-transformer-sharp": "^3.13.0",
     "react": "^17.0.1",
     "react-bootstrap": "^1.6.1",
     "react-custom-scrollbars": "^4.2.1",
