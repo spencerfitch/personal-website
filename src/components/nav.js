@@ -44,7 +44,7 @@ class Nav extends React.Component {
     return (
       <Navbar expand="sm" fixed="top" className={navClasses}>
         <div className="container-fluid">
-          <Navbar.Brand href="/">
+          <Navbar.Brand href="#">
             <StaticImage 
               src="../images/icon.png" 
               alt="Spencer Fitch website logo" 
