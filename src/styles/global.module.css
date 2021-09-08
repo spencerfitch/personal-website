@@ -1,11 +1,13 @@
 /* Color Theming */
 :root {
   --color-primary: #2CA58D;
+  --color-secondary: #A3CCB5;
   --color-bg-left: #effafb;
   --color-bg-right: #f5fff7; 
   --color-text: #6c757d;
   --color-link: #185B63;
   --color-link-hover: #30B6C5;
+  --color-shadow-primary: rgba(44, 165, 141, 0.5);
   --time-color-transition: 0.3s;
 }
 /*

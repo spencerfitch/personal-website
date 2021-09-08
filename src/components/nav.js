@@ -1,7 +1,7 @@
 import * as React from 'react';
 import "bootstrap/js/src/collapse.js";
 import { bgTranslucent } from '../styles/global.module.css';
-import { show, hide, shadow } from '../styles/nav.module.css';
+import { show, hide, shadow, resume } from '../styles/nav.module.css';
 import { StaticImage } from 'gatsby-plugin-image';
 
 
@@ -61,7 +61,7 @@ class Nav extends React.Component {
               <a className="nav-link" href="#projects">Projects</a>
               <a className="nav-link" href="#contact">Contact</a>
             </div>
-            <a className="btn btn-outline-primary" href="/resume.pdf" style={{widht: '3em'}}>
+            <a className={`${resume} btn`} href="/resume.pdf" style={{widht: '3em'}}>
               Resume
             </a>
           </div>
