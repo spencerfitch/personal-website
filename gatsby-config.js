@@ -44,6 +44,13 @@ module.exports = {
         path: `${__dirname}/content/projects`
       }
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `hero`,
+        path: `${__dirname}/content/hero`
+      }
+    },
     `gatsby-plugin-mdx`,
   ],
 };
