@@ -7,13 +7,27 @@
   transition: all 400ms ease-out;
   transform: translate(0, -100%);
 }
-/*
+
 .show.shadow {
-  box-shadow: 20px 20px ;
+  box-shadow: 0 0 0.5em;
 }
-*/
+
+.logo {
+  width: 2.7em;
+  padding: 0;
+  margin: 0;
+}
+.logo > *{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 2.7em;
+  height: 2.7em;
+  margin-left: 0.5em;
+}
 
 .resume {
+  width: 5em;
   color: var(--color-primary) !important;
   border-color: var(--color-primary) !important;
 }

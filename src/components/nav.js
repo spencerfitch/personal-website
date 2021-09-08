@@ -1,7 +1,7 @@
 import * as React from 'react';
-//import "bootstrap/js/src/collapse.js";
+import Navbar from 'react-bootstrap/Navbar';
 import { bgTranslucent } from '../styles/global.module.css';
-import { show, hide, shadow, resume } from '../styles/nav.module.css';
+import { show, hide, shadow, logo, resume } from '../styles/nav.module.css';
 import { StaticImage } from 'gatsby-plugin-image';
 
 
@@ -11,7 +11,7 @@ class Nav extends React.Component {
     this.state = {
       show: true,
       scrollPos: 0,
-      shadow: false
+      shadow: false,
     };
     this.handleScroll = this.handleScroll.bind(this);
   }
@@ -26,7 +26,7 @@ class Nav extends React.Component {
 
   handleScroll() {
     const { scrollPos } = this.state;
-    const currPos = document.body.getBoundingClientRect().top
+    const currPos = document.body.getBoundingClientRect().top;
     this.setState({
       scrollPos: currPos,
       show: currPos > scrollPos || currPos > -20,
@@ -36,37 +36,36 @@ class Nav extends React.Component {
 
   render() {
     const navClasses = `
-      navbar
-      navbar-expand-lg
-      fixed-top
-      navbar-light
       ${bgTranslucent}
       ${(this.state.show) ? show : hide}
-      ${(this.state.shadow) ? shadow : ''}
-    `
+      ${this.state.shadow && shadow}
+    `;
 
     return (
-      <nav className={navClasses}>
+      <Navbar expand="sm" fixed="top" className={navClasses}>
         <div className="container-fluid">
-          <a className="navbar-brand" href="/" style={{width: '3em', padding: 0, margin: 0}}>
-            <StaticImage src="../images/icon.png" alt="Spencer Fitch website logo" style={{position: 'fixed', left: 0, top: 0, height: '2.7em', width: '2.7em', marginLeft: '.5em'}}/>
-          </a>
-          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <Navbar.Brand href="/">
+            <StaticImage 
+              src="../images/icon.png" 
+              alt="Spencer Fitch website logo" 
+              className={logo}
+              placeholder='blurred'
+            />
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="navbar-collapse" />
+          <Navbar.Collapse id="navbar-collapse">
             <div className="navbar-nav mx-auto">
               <a className="nav-link" href="#about">About</a>
               <a className="nav-link" href="#skills">Skills</a>
               <a className="nav-link" href="#projects">Projects</a>
               <a className="nav-link" href="#contact">Contact</a>
             </div>
-            <a className={`${resume} btn`} href="/resume.pdf" style={{widht: '3em'}}>
+            <a className={`btn ${resume}`} href="/resume.pdf">
               Resume
             </a>
-          </div>
+          </Navbar.Collapse>
         </div>
-      </nav>
+      </Navbar>
     )
   }
 }
