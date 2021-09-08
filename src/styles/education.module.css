@@ -1,0 +1,37 @@
+.education {
+  margin: 1em 10vw;
+  margin-right: 0;
+  padding: 0.5em 1em;
+  border-left: 1pt solid #bbb;
+  transition: all 0.2s;
+  background: transparent;
+}
+.education:hover {
+  border-left: 3pt solid #bbb;
+}
+
+.school {
+  margin-bottom: 0.5em;
+}
+
+.type {
+  margin-bottom: 0;
+  color: var(--color-link);
+}
+
+.major {
+  color: var(--color-primary);
+}
+
+.courses {
+  padding-left: 1em;
+  list-style-type: none;
+}
+
+.courses > li {
+  text-indent: -5px;
+}
+.courses > li:before {
+  content: "– ";
+  text-indent: -5px;
+}
