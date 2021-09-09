@@ -9,6 +9,7 @@
   --color-link-hover: #30B6C5;
   --color-shadow-primary: rgba(44, 165, 141, 0.5);
   --time-color-transition: 0.3s;
+  --padding-x: 5vw;
 }
 /*
 @media (prefers-color-scheme: dark) {

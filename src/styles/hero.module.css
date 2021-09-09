@@ -1,7 +1,5 @@
 .container {
-  margin-top: 15vh;
-  margin-left: 10vw;
-  margin-bottom: 50vh;
+  padding-top: 15vh;
 }
 
 .introduction {
@@ -17,7 +15,7 @@
 }
 
 .content {
-  width: min(80%, 40em);
+  width: min(100%, 40em);
   margin-top: 2em;
   font-weight: 600;
 }
