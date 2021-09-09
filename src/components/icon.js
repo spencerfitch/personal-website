@@ -1,7 +1,8 @@
 import * as React from 'react';
 import { FaGithub } from '@react-icons/all-files/fa/FaGithub';
 import { BiLinkExternal } from '@react-icons/all-files/bi/BiLinkExternal';
-
+import { FaLinkedin } from '@react-icons/all-files/fa/FaLinkedin';
+import { MdEmail } from '@react-icons/all-files/md/MdEmail';
 import { icon, iconLink } from '../styles/icon.module.css';
 
 
@@ -11,6 +12,10 @@ const selectIcon = (name, style, className) => {
       return <FaGithub style={style} className={className} />
     case 'linkExternal':
       return <BiLinkExternal style={style} className={className}/>
+    case 'linkedin':
+      return <FaLinkedin style={style} className={className} />
+    case 'email':
+      return <MdEmail style={style} className={className} />
     default: 
       return <span/>
   }
