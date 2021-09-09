@@ -5,9 +5,11 @@ const Section = ({ name, title, children}) => {
   return (
     <div id={`${name}`.toLowerCase()} className={section}>
       {title && (
-        <h1 className={sectionTitle}>
-          {name}
-        </h1>
+        <div className={sectionTitle}>
+          <h1>
+            {name}
+          </h1>
+        </div>
       )}
       {children}
     </div>

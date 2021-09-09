@@ -4,7 +4,17 @@
 }
 
 .section-title {
+  width: min(30em, 80%);
+  margin-left: 5vw;
+  border: 0px;
+  border-bottom: 4px;
+  border-style: solid;
+  border-image: linear-gradient(135deg, var(--color-primary), var(--color-secondary), transparent) 1;
+}
+
+.section-title > h1{
   width: fit-content;
+  margin-bottom: -.15em;
   padding-bottom: 0.2em;
   background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
   background-clip: text;
