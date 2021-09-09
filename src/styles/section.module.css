@@ -1,0 +1,13 @@
+.section {
+  padding-top: 4em;
+  min-height: 100vh;
+}
+
+.section-title {
+  width: fit-content;
+  padding-bottom: 0.2em;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
