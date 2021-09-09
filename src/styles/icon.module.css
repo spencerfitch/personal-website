@@ -1,15 +1,11 @@
 .icon path {
-  color: var(--color-text);
+  color: var(--color-primary);
 }
 
-.icon-link {
-  height: 2em;
-  width: 2em;
-}
 .icon-link path {
   color: var(--color-link);
   transition: color var(--time-color-transition);
 }
 .icon-link:hover path{
-  color: var(--color-link-hover);
+  color: var(--color-primary);
 }
