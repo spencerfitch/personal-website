@@ -5,6 +5,7 @@
 .hide {
   visibility: hidden;
   transition: all 400ms ease-out;
+  transition-delay: 300ms;
   transform: translate(0, -100%);
 }
 
