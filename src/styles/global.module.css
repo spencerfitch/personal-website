@@ -70,7 +70,7 @@ body::-webkit-scrollbar-corner {
   transition: all var(--time-color-transition);
 }
 .link:hover{
-  color: var(--color-link-hover);
+  color: var(--color-primary);
 }
 
 /* Button Gradient Oultine */
