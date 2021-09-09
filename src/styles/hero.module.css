@@ -24,3 +24,8 @@
   color: var(--color-primary);
   font-weight: 700;
 }
+
+.btn-hero {
+  margin-top: 1em;
+  font-weight: 600 !important;
+}

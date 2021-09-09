@@ -2,7 +2,8 @@ import * as React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 import { MDXProvider } from '@mdx-js/react';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
-import { container, introduction, title, subtitle, content} from '../../styles/hero.module.css';
+import { btnGradientOutline } from '../../styles/global.module.css';
+import { container, introduction, title, subtitle, content, btnHero } from '../../styles/hero.module.css';
 
 const Hero = () => {
   const heroQuery = graphql`
@@ -39,6 +40,9 @@ const Hero = () => {
                 {data.mdx.body}
               </MDXRenderer>
             </MDXProvider>
+            <a className={`btn ${btnGradientOutline} ${btnHero}`} href="#about">
+              Learn more about me
+            </a>
           </div>
         )}
       />
