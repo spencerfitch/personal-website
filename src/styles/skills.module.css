@@ -1,0 +1,31 @@
+.language-container {
+  margin-top: 1em;
+}
+.language-container:first {
+  margin-top: 0;
+}
+
+.language {
+  color: var(--color-link);
+}
+
+.experience {
+  height: 1.8em !important;
+  border: 2px solid var(--color-primary);
+}
+.experience > * {
+  background-color: var(--color-primary) !important;
+}
+
+/*
+.libraries {
+  overflow: hidden;
+  height: 0;
+  margin: 0;
+  transition: all 0.5s ease;
+}
+.language-container:hover .libraries{
+  height: 2em;
+  transition: all 0.5s ease;
+}
+*/
