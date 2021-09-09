@@ -1,54 +1,47 @@
-import * as React from "react"
-import { Link } from "gatsby"
+import * as React from "react";
+import { Link } from "gatsby";
+import '../styles/global.module.css';
+import { StaticImage } from "gatsby-plugin-image";
+import { 
+  main, 
+  logoContainer, 
+  logoImage, 
+  logoTitle, 
+  message,
+  home } from "../styles/404.module.css";
 
-// styles
-const pageStyles = {
-  color: "#232129",
-  padding: "96px",
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-}
-
-const paragraphStyles = {
-  marginBottom: 48,
-}
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
-}
-
-// markup
 const NotFoundPage = () => {
   return (
-    <main style={pageStyles}>
+    <main className={main}>
       <title>Not found</title>
-      <h1 style={headingStyles}>Page not found</h1>
-      <p style={paragraphStyles}>
-        Sorry{" "}
-        <span role="img" aria-label="Pensive emoji">
-          😔
-        </span>{" "}
-        we couldn’t find what you were looking for.
-        <br />
-        {process.env.NODE_ENV === "development" ? (
-          <>
-            <br />
-            Try creating a page in <code style={codeStyles}>src/pages/</code>.
-            <br />
-          </>
-        ) : null}
-        <br />
-        <Link to="/">Go home</Link>.
-      </p>
+
+      <Link to="/" className={logoContainer} >
+        <div className={logoImage}>
+          <StaticImage 
+            src="../images/icon.png" 
+            alt="Spencer Fitch website logo"
+            className={logoImage} 
+            placeholder='blurred'
+          />
+        </div>
+        <h1 className={logoTitle}>
+          spencerfitch.com
+        </h1>
+      </Link>
+      <div className={message}>
+        <h1>
+          Uh oh, page not found
+        </h1>
+        <p>
+          Sorry, I don't seem to have the page you're looking for on my website.
+          <br />
+          Click the button below to go back to the home page.
+        </p>
+      </div>
+      <Link to="/" className={`${home} btn`}>Go Home</Link>
+      
     </main>
   )
 }
 
-export default NotFoundPage
+export default NotFoundPage;
