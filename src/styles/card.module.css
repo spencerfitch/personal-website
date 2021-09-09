@@ -1,6 +1,6 @@
 :root {
   --card-margin: 0.5em;
-  --card-padding: 0.5em;
+  --card-padding: 1em;
   --card-shift: -0.15em;
 }
 
