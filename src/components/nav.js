@@ -1,5 +1,6 @@
 import * as React from 'react';
 import Navbar from 'react-bootstrap/Navbar';
+import { Nav as BsNav } from 'react-bootstrap' ;
 import { bgTranslucent } from '../styles/global.module.css';
 import { show, hide, shadow, logo, resume } from '../styles/nav.module.css';
 import { StaticImage } from 'gatsby-plugin-image';
@@ -42,7 +43,7 @@ class Nav extends React.Component {
     `;
 
     return (
-      <Navbar expand="sm" fixed="top" className={navClasses}>
+      <Navbar id="navbar-test" expand="sm" fixed="top" className={navClasses} collapseOnSelect>
         <div className="container-fluid">
           <Navbar.Brand href="#">
             <StaticImage 
@@ -54,12 +55,12 @@ class Nav extends React.Component {
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbar-collapse" />
           <Navbar.Collapse id="navbar-collapse">
-            <div className="navbar-nav mx-auto">
-              <a className="nav-link" href="#about">About</a>
-              <a className="nav-link" href="#skills">Skills</a>
-              <a className="nav-link" href="#projects">Projects</a>
-              <a className="nav-link" href="#contact">Contact</a>
-            </div>
+            <BsNav className="mx-auto">
+              <BsNav.Link className="nav-link" href="#about" active={false}>About</BsNav.Link>
+              <BsNav.Link className="nav-link" href="#skills" active={false}>Skills</BsNav.Link>
+              <BsNav.Link className="nav-link" href="#projects" active={false}>Projects</BsNav.Link>
+              <BsNav.Link className="nav-link" href="#contact" active={false}>Contact</BsNav.Link>
+            </BsNav>
             <a className={`btn ${resume}`} href="/resume.pdf">
               Resume
             </a>
