@@ -6,7 +6,7 @@ import { MDXRenderer } from 'gatsby-plugin-mdx';
 import Card from '../card';
 import Icon from '../icon';
 import { link } from '../../styles/global.module.css';
-import { projectContainer, project, projectTitle, tag } from '../../styles/project.module.css';
+import { projectContainer, project, projectTitle, linkContainer, tagContainer, tag } from '../../styles/project.module.css';
 
 
 const Projects = () => {
@@ -18,11 +18,12 @@ const Projects = () => {
       ) {
         nodes {
           frontmatter {
+            show
+            title
+            icon
             demo
             github
-            show
             tags
-            title
           }
           body
         }
@@ -40,40 +41,57 @@ const Projects = () => {
           data.allMdx.nodes.map((node, idx) => (
             node.frontmatter.show && (
               <Card key={idx} className={project}>
-                <h3>
-                  <a 
-                    href={(node.frontmatter.demo) ? node.frontmatter.demo : node.frontmatter.github}
-                    rel="noreferrer"
-                    target="_blank"
-                    className={`${link} ${projectTitle}`}
-                  >
-                    {node.frontmatter.title}
-                  </a>
-                </h3>
+                <div>
+
+                  <div>
+                    <Icon
+                      name={(node.frontmatter.icon) ? node.frontmatter.icon : 'folder'}
+                      size="2.7em"
+                      style={{backgroundColor: 'blue !important'}}
+                    />
+                    <div className={linkContainer}>
+                      {node.frontmatter.github && (
+                        <Icon
+                          name="github" 
+                          href={node.frontmatter.github}
+                          size="2em"/>
+                      )}
+                      {node.frontmatter.demo && (
+                        <Icon
+                          name="linkExternal"
+                          href={node.frontmatter.demo}
+                          size="2em"/>
+                      )}
+                    </div>
+                  </div>
+
+                  <h3 className={projectTitle}>
+                    <a 
+                      href={(node.frontmatter.demo) ? node.frontmatter.demo : node.frontmatter.github}
+                      rel="noreferrer"
+                      target="_blank"
+                      className={link}
+                    >
+                      {node.frontmatter.title}
+                    </a>
+                  </h3>  
+
+                  <MDXProvider components={{p: mdxPtag}}>
+                    <MDXRenderer>
+                      {node.body}
+                    </MDXRenderer>
+                  </MDXProvider>
+
+                </div>
+
+                <div className={tagContainer}>
+                  {node.frontmatter.tags.map((elem, idx) => (
+                    <span key={idx} className={tag}>
+                      {elem}
+                    </span>
+                  ))}
+                </div>
                 
-                {node.frontmatter.github && (
-                  <Icon
-                    name="github" 
-                    href={node.frontmatter.github}
-                    style={{backgroundColor: 'blue'}}/>
-                )}
-                {node.frontmatter.demo && (
-                  <Icon
-                    name="linkExternal"
-                    href={node.frontmatter.demo}/>
-                )}
-
-                <MDXProvider components={{p: mdxPtag}}>
-                  <MDXRenderer>
-                    {node.body}
-                  </MDXRenderer>
-                </MDXProvider>
-
-                {node.frontmatter.tags.map((elem, idx) => (
-                  <span key={idx} className={tag}>
-                    {elem}
-                  </span>
-                ))}
               </Card>
         ))))}
       />

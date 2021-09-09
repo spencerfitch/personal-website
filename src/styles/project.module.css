@@ -1,5 +1,6 @@
 .project-container {
   width: fit-content;
+  margin-top: 1em;
   margin-left: auto;
   margin-right: auto;
   display: grid;
@@ -26,9 +27,15 @@
 .project {
   min-width: 15em;
   max-width: 22em;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
 }
 
-.project-title:before {
+.project-title {
+  margin-top: 1em;
+}
+.project-title a:before {
   position: absolute;
   left: 0;
   top: 0;
@@ -38,10 +45,20 @@
   z-index: 0;
 }
 
+.link-container {
+  float: right;
+}
+
+.tag-container {
+  text-align: center;
+  padding-top: 0.5em;
+}
+
 .tag {
   display: inline-block;
+  font-size: 0.8em;
   margin: 0.2em;
   padding: 0.1em 0.7em;
-  background-color: rgba(24, 91, 99, 0.2);
+  background-color: rgba(24, 91, 99, 0.1);
   border-radius: 1em;
 }
