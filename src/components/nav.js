@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Navbar from 'react-bootstrap/Navbar';
 import { Nav as BsNav } from 'react-bootstrap' ;
-import { bgTranslucent } from '../styles/global.module.css';
+import { bgTranslucent, btnGradientOutline } from '../styles/global.module.css';
 import { show, hide, shadow, logo, resume } from '../styles/nav.module.css';
 import { StaticImage } from 'gatsby-plugin-image';
 
@@ -61,7 +61,7 @@ class Nav extends React.Component {
               <BsNav.Link className="nav-link" href="#projects" active={false}>Projects</BsNav.Link>
               <BsNav.Link className="nav-link" href="#contact" active={false}>Contact</BsNav.Link>
             </BsNav>
-            <a className={`btn ${resume}`} href="/resume.pdf" target="_blank" rel="noopener noreferrer" >
+            <a className={`btn ${btnGradientOutline} ${resume}`} href="/resume.pdf" target="_blank" rel="noopener noreferrer" >
               Resume
             </a>
           </Navbar.Collapse>

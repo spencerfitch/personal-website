@@ -72,3 +72,17 @@ body::-webkit-scrollbar-corner {
 .link:hover{
   color: var(--color-link-hover);
 }
+
+/* Button Gradient Oultine */
+.btn-gradient-outline {
+  color: var(--color-primary) !important;
+  border-color: var(--color-primary) !important;
+}
+.btn-gradient-outline:hover {
+  color: var(--color-bg-right) !important;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary)) !important;
+  border-color: var(--color-primary) !important;
+}
+.btn-gradient-outline:focus {
+  box-shadow: 0 0 0 0.25rem var(--color-shadow-primary) !important;
+}

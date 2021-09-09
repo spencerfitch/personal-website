@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Link } from "gatsby";
-import '../styles/global.module.css';
+import { btnGradientOutline } from '../styles/global.module.css';
 import { StaticImage } from "gatsby-plugin-image";
 import { 
   main, 
@@ -38,7 +38,7 @@ const NotFoundPage = () => {
           Click the button below to go back to the home page.
         </p>
       </div>
-      <Link to="/" className={`${home} btn`}>Go Home</Link>
+      <Link to="/" className={`btn ${btnGradientOutline} ${home} `}>Go Home</Link>
       
     </main>
   )
