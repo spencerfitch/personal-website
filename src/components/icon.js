@@ -1,36 +1,59 @@
 import * as React from 'react';
-import { FaGithub } from '@react-icons/all-files/fa/FaGithub';
-import { BiLinkExternal } from '@react-icons/all-files/bi/BiLinkExternal';
-import { FaLinkedin } from '@react-icons/all-files/fa/FaLinkedin';
-import { MdEmail } from '@react-icons/all-files/md/MdEmail';
-import { FiFolder } from '@react-icons/all-files/fi/FiFolder';
-import { FaCube } from '@react-icons/all-files/fa/FaCube';
-import { FaPlane } from'@react-icons/all-files/fa/FaPlane';
-import { BsQuestionCircleFill } from '@react-icons/all-files/bs/BsQuestionCircleFill';
 import { icon, iconLink } from '../styles/icon.module.css';
 
+// Import icons individually to reduce react-icons size in webpack
+import { BiFolder } from '@react-icons/all-files/bi/BiFolder';
+import { BiLinkExternal } from '@react-icons/all-files/bi/BiLinkExternal';
+import { BsQuestionCircleFill } from '@react-icons/all-files/bs/BsQuestionCircleFill';
+import { FaCube } from '@react-icons/all-files/fa/FaCube';
+import { FaGithub } from '@react-icons/all-files/fa/FaGithub';
+import { FaLinkedin } from '@react-icons/all-files/fa/FaLinkedin';
+import { FaPlane } from '@react-icons/all-files/fa/FaPlane';
+import { HiCode } from '@react-icons/all-files/hi/HiCode';
+import { MdEmail } from '@react-icons/all-files/md/MdEmail';
+import { RiParenthesesLine } from '@react-icons/all-files/ri/RiParenthesesLine';
+import { SiAmazonaws } from '@react-icons/all-files/si/SiAmazonaws';
+import { SiAnaconda } from '@react-icons/all-files/si/SiAnaconda';
+import { SiCplusplus } from '@react-icons/all-files/si/SiCplusplus';
+import { SiCss3 } from '@react-icons/all-files/si/SiCss3';
+import { SiGit } from '@react-icons/all-files/si/SiGit';
+import { SiGooglecloud } from '@react-icons/all-files/si/SiGooglecloud';
+import { SiHeroku } from '@react-icons/all-files/si/SiHeroku';
+import { SiJava } from '@react-icons/all-files/si/SiJava';
+import { SiJavascript } from '@react-icons/all-files/si/SiJavascript';
+import { SiPython } from '@react-icons/all-files/si/SiPython';
+
+
+const icons = {
+  'anaconda': SiAnaconda,
+  'aws': SiAmazonaws,
+  'cplusplus': SiCplusplus,
+  'css': SiCss3,
+  'cube': FaCube,
+  'email': MdEmail,
+  'folder': BiFolder,
+  'git': SiGit,
+  'github': FaGithub,
+  'googleCloud': SiGooglecloud,
+  'heroku': SiHeroku,
+  'java': SiJava,
+  'javascript': SiJavascript,
+  'linkExternal': BiLinkExternal,
+  'linkedin': FaLinkedin,
+  'lisp': RiParenthesesLine,
+  'plane': FaPlane,
+  'python': SiPython,
+  'question': BsQuestionCircleFill,
+  'unix': HiCode,
+}
 
 const selectIcon = (name, style, className) => {
-  switch (name) {
-    case 'github':
-      return <FaGithub style={style} className={className} />
-    case 'linkExternal':
-      return <BiLinkExternal style={style} className={className}/>
-    case 'linkedin':
-      return <FaLinkedin style={style} className={className} />
-    case 'email':
-      return <MdEmail style={style} className={className} />
-    case 'folder':
-      return <FiFolder style={style} className={className} />
-    case 'cube':
-      return <FaCube style={style} className={className} />
-    case 'plane':
-      return <FaPlane style={style} className={className} />
-    case 'question':
-      return <BsQuestionCircleFill style={style} className={className} />
-    default: 
-      console.warn(`icon.js: requested unsupported icon name '${name}'`)
-      return <span/>
+  let Tag = icons[name];
+  if (name) {
+    return <Tag style={style} className={className} />;
+  } else {
+    console.warn (`icon.js: requested unsupported icon name '${name}'`);
+    return;
   }
 }
 
