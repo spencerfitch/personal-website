@@ -58,7 +58,7 @@ const Projects = () => {
                       )}
                       {node.frontmatter.demo && (
                         <Icon
-                          name="linkExternal"
+                          name="link-external"
                           href={node.frontmatter.demo}
                           size="2em"/>
                       )}
