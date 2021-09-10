@@ -62,9 +62,9 @@ class Nav extends React.Component {
               <BsNav.Link className="nav-link" href="#projects" active={false}>Projects</BsNav.Link>
               <BsNav.Link className="nav-link" href="#contact" active={false}>Contact</BsNav.Link>
             </BsNav>
-            <Link className={`btn ${btnGradientOutline} ${resume}`} href="/resume.pdf" target="_blank" rel="noopener noreferrer" >
+            <a className={`btn ${btnGradientOutline} ${resume}`} href="/resume.pdf" target="_blank" rel="noopener noreferrer" >
               Resume
-            </Link>
+            </a>
           </Navbar.Collapse>
         </div>
       </Navbar>
