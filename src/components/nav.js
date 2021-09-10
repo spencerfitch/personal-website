@@ -4,7 +4,6 @@ import { Nav as BsNav } from 'react-bootstrap' ;
 import { bgTranslucent, btnGradientOutline } from '../styles/global.module.css';
 import { show, hide, shadow, logo, resume } from '../styles/nav.module.css';
 import { StaticImage } from 'gatsby-plugin-image';
-import { Link } from 'gatsby';
 
 
 class Nav extends React.Component {
@@ -58,6 +57,7 @@ class Nav extends React.Component {
           <Navbar.Collapse id="navbar-collapse">
             <BsNav className="mx-auto">
               <BsNav.Link className="nav-link" href="#about" active={false}>About</BsNav.Link>
+              <BsNav.Link className="nav-link" href="#education" active={false}>Education</BsNav.Link>
               <BsNav.Link className="nav-link" href="#skills" active={false}>Skills</BsNav.Link>
               <BsNav.Link className="nav-link" href="#projects" active={false}>Projects</BsNav.Link>
               <BsNav.Link className="nav-link" href="#contact" active={false}>Contact</BsNav.Link>

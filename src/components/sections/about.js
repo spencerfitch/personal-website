@@ -2,7 +2,6 @@ import * as React from 'react';
 import { graphql, StaticQuery } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { StaticImage } from 'gatsby-plugin-image';
-import Education from '../education';
 import { aboutContainer, aboutText, portrait } from '../../styles/about.module.css';
 
 

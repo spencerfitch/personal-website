@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { graphql, StaticQuery } from 'gatsby';
-import Card from './card';
-import { container, education, school, type, major, courses } from '../styles/education.module.css';
+import Card from '../card';
+import { container, education, school, type, major, courses } from '../../styles/education.module.css';
 
 const Education = () => {
   const educationQuery = graphql`

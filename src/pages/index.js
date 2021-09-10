@@ -7,6 +7,7 @@ import Skills from '../components/sections/skills';
 import Projects from '../components/sections/projects';
 import Section from '../components/section';
 import Contact from '../components/sections/contact';
+import Education from '../components/sections/education';
 
 const IndexPage = () => {
   return (
@@ -17,6 +18,10 @@ const IndexPage = () => {
 
       <Section name="About" title>
         <About />
+      </Section>
+
+      <Section name="Education" title>
+        <Education />
       </Section>
 
       <Section name="Skills" title>
