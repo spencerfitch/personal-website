@@ -1,6 +1,26 @@
 import * as React from 'react';
 import { graphql, StaticQuery } from 'gatsby';
+import { MDXRenderer } from 'gatsby-plugin-mdx';
 import Icon from '../icon';
+import { link } from '../../styles/global.module.css';
+import { contactIntro, linkContainer, contactLink } from '../../styles/contact.module.css';
+
+
+const ContactLink = ({ href, iconName, text }) => {
+  return (
+    <div className={contactLink}>
+      <a href={href} className={link} target="_blank" rel="noreferrer">
+        <Icon
+          name={iconName} 
+          size="1.5em"
+        />
+        <span>
+          {text}
+        </span>
+      </a>
+    </div>
+  )
+}
 
 const Contact = () => {
   const query = graphql`
@@ -11,32 +31,41 @@ const Contact = () => {
           linkedin
           github
         }
+        body
       }
     }
   `;
 
   return (
-    <div>
-      <StaticQuery
-        query={query}
-        render={data => (
-          <>
-            <Icon
-              name="email" 
+    <StaticQuery
+      query={query}
+      render={data => (
+        <>
+          <div className={contactIntro}>
+            <MDXRenderer>
+              {data.mdx.body}
+            </MDXRenderer>
+          </div>
+          <div className={linkContainer}>
+            <ContactLink
               href={`mailto:${data.mdx.frontmatter.email}`}
+              iconName="email"
+              text={data.mdx.frontmatter.email}
             />
-            <Icon
-              name="github"
+            <ContactLink
               href={data.mdx.frontmatter.github}
+              iconName="github"
+              text={data.mdx.frontmatter.github.slice(8)}
             />
-            <Icon
-              name="linkedin"
-              href={data.mdx.frontmatter.linkedin}
+            <ContactLink
+              href={data.mdx.frontmatter.github}
+              iconName="linkedin"
+              text={data.mdx.frontmatter.linkedin.slice(8)}
             />
-          </>
-        )}
-      />
-    </div>
+          </div>
+        </>
+      )}
+    />
   )
 }
 

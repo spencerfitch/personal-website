@@ -1,14 +1,14 @@
 .section {
   min-height: 100vh;
   padding: 0 var(--padding-x);
-  padding-top: 4em;
+  padding-top: 5em;
 }
-.section:first-of-type {
-  padding-top: 0;
+.section:last-of-type {
+  padding-top: 13em;
 }
 
 .section-title {
-  width: min(30em, 80%);
+  width: 80%;
   border: 0px;
   border-bottom: 4px;
   border-style: solid;

@@ -1,0 +1,40 @@
+.contact-intro {
+  margin-top: 2em;
+  margin-bottom: 0.5em;
+}
+.contact-intro p {
+  margin: 0;
+  text-align: center;
+  
+  font-size: larger;
+  font-weight: 500;
+  color: var(--color-link);
+}
+
+.link-container {
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.contact-link {
+  width: fit-content;
+  padding: 0.3em;
+  font-size: larger;
+}
+
+.contact-link a {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.contact-link span {
+  padding-left: 0.5em;
+}
+
+.contact-link path, .contact-link span {
+  color: var(--color-link);
+  transition: all var(--time-transition-color);
+}
+.contact-link:hover path, .contact-link:hover span {
+  color: var(--color-primary);
+}
