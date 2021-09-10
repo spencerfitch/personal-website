@@ -49,11 +49,11 @@ const icons = {
 
 const selectIcon = (name, style, className) => {
   let Tag = icons[name];
-  if (name) {
+  if (Tag) {
     return <Tag style={style} className={className} />;
   } else {
     console.warn (`icon.js: requested unsupported icon name '${name}'`);
-    return;
+    return <span/>;
   }
 }
 
