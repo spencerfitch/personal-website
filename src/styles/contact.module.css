@@ -32,7 +32,7 @@
 
 .contact-link path, .contact-link span {
   color: var(--color-link);
-  transition: all var(--time-transition-color);
+  transition: all linear var(--time-color-transition);
 }
 .contact-link:hover path, .contact-link:hover span {
   color: var(--color-primary);
