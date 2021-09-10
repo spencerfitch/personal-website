@@ -1,8 +1,9 @@
 import * as React from 'react';
 import { graphql, StaticQuery } from 'gatsby';
+import Card from './card';
 import { container, education, school, type, major, courses } from '../styles/education.module.css';
 
-const Education = ({  }) => {
+const Education = () => {
   const educationQuery = graphql`
     query {
       allMdx(
@@ -14,8 +15,8 @@ const Education = ({  }) => {
             type
             major
             school
-            end(formatString: "MMM YYYY")
-            start(formatString: "MMM YYYY")
+            end(formatString: "MMMM YYYY")
+            start(formatString: "MMMM YYYY")
             gpa
             courses
           }
@@ -24,13 +25,15 @@ const Education = ({  }) => {
     }
   `;
 
+  const formatDate = (date) => (date.slice(0,4) + date.slice(-5));
+
   return (
     <div className={container}>
       <StaticQuery
         query={educationQuery}
         render={data => (
           data.allMdx.nodes.map((node, idx) => (
-            <div key={idx} className={education}>
+            <Card key={idx} className={education}>
               <h5 className={school}>
                 {node.frontmatter.school}
               </h5>
@@ -41,20 +44,20 @@ const Education = ({  }) => {
                 {node.frontmatter.major}
               </h3>
               <h6>
-                {`${node.frontmatter.start} – ${node.frontmatter.end}`}
+                {`${formatDate(node.frontmatter.start)} – ${formatDate(node.frontmatter.end)}`}
               </h6>
               <h6>
                 GPA: {node.frontmatter.gpa.toFixed(2)}
               </h6>
-              <div>
+              <div className={courses}>
                 Notable courses:
-                <ul className={courses}>
+                <ul>
                   {node.frontmatter.courses.map((course, idx) => (
                     <li key={idx}>{course}</li>
                   ))}
                 </ul>
               </div>
-            </div>
+            </Card>
           ))
         )}
       />

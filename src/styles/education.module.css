@@ -1,15 +1,13 @@
 .container {
-  padding-left: var(--padding-x);
+  margin: 1em auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
 }
 
 .education {
-  margin: 1em 0;
-  padding: 0.5em 1em;
-  border-left: 1pt solid #bbb;
-  transition: all 0.2s;
-}
-.education:hover {
-  border-left: 3pt solid #bbb;
+  flex: 1 0 20em;
+  max-width: 25em;
 }
 
 .school {
@@ -26,14 +24,18 @@
 }
 
 .courses {
+  margin-top: 1em;
+}
+
+.courses ul{
   padding-left: 1em;
   list-style-type: none;
 }
 
-.courses > li {
+.courses li {
   text-indent: -5px;
 }
-.courses > li:before {
+.courses li:before {
   content: "– ";
   text-indent: -5px;
 }
