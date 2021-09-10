@@ -21,6 +21,7 @@ import { SiGooglecloud } from '@react-icons/all-files/si/SiGooglecloud';
 import { SiHeroku } from '@react-icons/all-files/si/SiHeroku';
 import { SiJava } from '@react-icons/all-files/si/SiJava';
 import { SiJavascript } from '@react-icons/all-files/si/SiJavascript';
+import { SiJupyter } from '@react-icons/all-files/si/SiJupyter';
 import { SiPython } from '@react-icons/all-files/si/SiPython';
 
 
@@ -38,6 +39,7 @@ const icons = {
   'heroku': SiHeroku,
   'java': SiJava,
   'javascript': SiJavascript,
+  'jupyter': SiJupyter,
   'link-external': BiLinkExternal,
   'linkedin': FaLinkedin,
   'lisp': RiParenthesesLine,
