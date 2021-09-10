@@ -40,7 +40,7 @@ const Projects = () => {
         render={data => (
           data.allMdx.nodes.map((node, idx) => (
             node.frontmatter.show && (
-              <Card key={idx} className={project}>
+              <Card key={idx} className={project} hover>
                 <div>
 
                   <div>

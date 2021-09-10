@@ -1,10 +1,18 @@
 import * as React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { card } from '../styles/card.module.css'
+import { card, cardHover } from '../styles/card.module.css'
 
-const Card = ({ children, className, style }) => {
+const Card = ({ children, className, hover, style }) => {
+  const cardClasses = `
+    ${card}
+    ${hover && cardHover}
+    rounded
+    shadow
+    ${className}
+  `;
+
   return (
-    <div className={`${card} rounded shadow ${className}`} style={style}>
+    <div className={cardClasses} style={style}>
       {children}
     </div>
   )
