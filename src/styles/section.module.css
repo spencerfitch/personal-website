@@ -19,6 +19,7 @@
   width: fit-content;
   margin-bottom: -.15em;
   padding-bottom: 0.2em;
+  font-weight: 700;
   background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
   background-clip: text;
   -webkit-background-clip: text;
