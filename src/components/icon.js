@@ -23,6 +23,7 @@ import { SiJava } from '@react-icons/all-files/si/SiJava';
 import { SiJavascript } from '@react-icons/all-files/si/SiJavascript';
 import { SiJupyter } from '@react-icons/all-files/si/SiJupyter';
 import { SiPython } from '@react-icons/all-files/si/SiPython';
+import { SiVisualstudiocode } from '@react-icons/all-files/si/SiVisualstudiocode';
 
 
 const icons = {
@@ -47,6 +48,7 @@ const icons = {
   'python': SiPython,
   'question': BsQuestionCircleFill,
   'unix': HiCode,
+  'vs-code': SiVisualstudiocode,
 }
 
 const selectIcon = (name, style, className) => {
