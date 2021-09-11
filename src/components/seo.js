@@ -63,7 +63,7 @@ const Seo = () => {
               "gender": "Male",
               "knowsAbout": "Software Engineering",
               "knowsLanguage": "English",
-              "image": "${siteUrl}${authorImage}",
+              "image": "${siteUrl}${authorImage}"
             }
           }
         `}
