@@ -1,13 +1,19 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: `https://www.yourdomain.tld`,
-    title: `personal-website`,
+    title: `Spencer Fitch`,
+    description: `Portfolio website for Spencer Fitch, an aspiring full-stack software engineer with interests in everything from scalable application design to computational photography.`,
+    siteUrl: `https://www.spencerfitch.com`,
+    image: `/icon.png`,
+    author: `Spencer Fitch`,
+    authorEmail: `spencer@spencerfitch.com`,
+    authorImage: `/portrait.jpg`,
   },
   plugins: [
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-mdx`,
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
