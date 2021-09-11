@@ -1,7 +1,7 @@
 .skill-container {
   display: flex;
   flex-flow: row wrap;
-  padding: 1em calc(var(--padding-x) / 2);
+  padding: 1em 0;
 }
 .skill-container > * {
   flex-grow: 1;
@@ -30,7 +30,6 @@
 }
 .experience > * {
   background-color: var(--color-primary);
-  font-size: 1.2em;
 }
 
 .center-content {
