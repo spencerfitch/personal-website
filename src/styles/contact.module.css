@@ -3,7 +3,8 @@
   margin-bottom: 0.5em;
 }
 .contact-intro p {
-  margin: 0;
+  margin: 0 auto;
+  max-width: 28em;
   text-align: center;
   font-size: larger;
   font-weight: 500;
