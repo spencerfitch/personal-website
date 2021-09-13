@@ -8,7 +8,7 @@ import { aboutContainer, aboutText, portrait } from '../../styles/about.module.c
 const About = () => {
   const aboutQuery = graphql`
     query {
-      mdx(fileAbsolutePath: {regex: "/content/about/about.mdx/"}) {
+      mdx(fileAbsolutePath: {regex: "/content/about.mdx/"}) {
         body
       }
     }
