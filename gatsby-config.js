@@ -61,5 +61,13 @@ module.exports = {
         path: `${__dirname}/content/projects`
       }
     },
+    { 
+      resolve: `gatsby-plugin-gtag`,
+      options: {
+        trackingId: `G-7ZQ9FH45QC`,
+        head: true,
+        anonymize: true,
+      }
+    },
   ],
 };
