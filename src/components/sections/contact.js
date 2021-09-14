@@ -1,6 +1,8 @@
 import * as React from 'react';
 import { graphql, StaticQuery } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
+import { OutboundLink } from 'gatsby-plugin-gtag';
+
 import Icon from '../icon';
 import { link } from '../../styles/global.module.css';
 import { contactIntro, linkContainer, contactLink } from '../../styles/contact.module.css';
@@ -9,7 +11,7 @@ import { contactIntro, linkContainer, contactLink } from '../../styles/contact.m
 const ContactLink = ({ href, iconName, text }) => {
   return (
     <div className={contactLink}>
-      <a href={href} className={link} target="_blank" rel="noreferrer">
+      <OutboundLink href={href} className={link} target="_blank" rel="noreferrer">
         <Icon
           name={iconName} 
           size="1.5em"
@@ -17,7 +19,7 @@ const ContactLink = ({ href, iconName, text }) => {
         <span>
           {text}
         </span>
-      </a>
+      </OutboundLink>
     </div>
   )
 }

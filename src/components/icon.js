@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { OutboundLink } from 'gatsby-plugin-gtag';
 import { icon, iconLink } from '../styles/icon.module.css';
 
 // Import icons individually to reduce react-icons size in webpack
@@ -66,9 +67,9 @@ const Icon = ({ name, size, href }) => {
 
   if (href) {
     return (
-      <a href={href} rel="noreferrer" target="_blank" style={{zIndex: 1, position: 'relative'}}>
+      <OutboundLink href={href} rel="noreferrer" target="_blank" style={{zIndex: 1, position: 'relative'}}>
         {selectIcon(name, style, iconLink)}
-      </a>
+      </OutboundLink>
     )
   } else {
     return (

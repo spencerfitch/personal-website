@@ -2,6 +2,7 @@ import * as React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 import { MDXProvider } from "@mdx-js/react";
 import { MDXRenderer } from 'gatsby-plugin-mdx';
+import { OutboundLink } from 'gatsby-plugin-gtag';
 
 import Card from '../card';
 import Icon from '../icon';
@@ -66,14 +67,14 @@ const Projects = () => {
                   </div>
 
                   <h3 className={projectTitle}>
-                    <a 
+                    <OutboundLink
                       href={(node.frontmatter.demo) ? node.frontmatter.demo : node.frontmatter.github}
                       rel="noreferrer"
                       target="_blank"
                       className={link}
                     >
                       {node.frontmatter.title}
-                    </a>
+                    </OutboundLink>
                   </h3>  
 
                   <MDXProvider components={{p: mdxPtag}}>
