@@ -60,7 +60,7 @@ const Contact = () => {
               text={data.mdx.frontmatter.github.slice(8)}
             />
             <ContactLink
-              href={data.mdx.frontmatter.github}
+              href={data.mdx.frontmatter.linkedin}
               iconName="linkedin"
               text={data.mdx.frontmatter.linkedin.slice(8)}
             />
