@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Spencer Fitch`,
-    description: `Portfolio website for Spencer Fitch, an aspiring full-stack software engineer with interests in everything from scalable application design to computational photography.`,
+    description: `I'm a full-stack software engineer with interests in everything from scalable application design to computational photography.`,
     siteUrl: `https://www.spencerfitch.com`,
     image: `/icon.png`,
     author: `Spencer Fitch`,
